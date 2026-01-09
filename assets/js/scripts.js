@@ -1,13 +1,13 @@
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 formulario.addEventListener('submit', function(event){
-    event.preventDefautl();
+    event.preventDefault(); 
 
-    const campoNome = document.querySelector('name');
+    const campoNome = document.querySelector('#name'); 
     const errNome = document.querySelector('#errNome');
 
     if(campoNome.value.length < 3){
-        errNome.innerHTML = 'O Nome deve ter no minimo 3 caracteres.';
+        errNome.innerHTML = 'O Nome deve ter no mínimo 3 caracteres.';
         campoNome.focus();
         return;
     } else {
@@ -28,8 +28,8 @@ formulario.addEventListener('submit', function(event){
     const campoSubject = document.querySelector('#subject');
     const errSubject = document.querySelector('#errSubject');
 
-    if(campoSubject.valu.length < 5) {
-        errSubject.innerHTML = 'O Assunto deve ter no minimo 5 caracteres.';
+    if(campoSubject.value.length < 5) {
+        errSubject.innerHTML = 'O Assunto deve ter no mínimo 5 caracteres.';
         campoSubject.focus();
         return;
     } else {
@@ -40,8 +40,8 @@ formulario.addEventListener('submit', function(event){
 
     window.alert('Formulário Enviado com Sucesso!');
 
-    campoNome.value = ''
-    campoEmail.value = ''
-    campoSubject.value = ''
-    campoMessage.value = ''
+    campoNome.value = '';
+    campoEmail.value = '';
+    campoSubject.value = '';
+    campoMessage.value = '';
 });
