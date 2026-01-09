@@ -4,7 +4,7 @@ formulario.addEventListener('submit', function(event){
     event.preventDefault(); 
 
     const campoNome = document.querySelector('#name'); 
-    const errNome = document.querySelector('#errNome');
+    const errNome = document.querySelector('#errName');
 
     if(campoNome.value.length < 3){
         errNome.innerHTML = 'O Nome deve ter no mínimo 3 caracteres.';
